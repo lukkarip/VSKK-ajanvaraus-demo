@@ -1,0 +1,65 @@
+﻿body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#ylapalkki img {
+    margin: 10px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"]
+{
+    width: 100%;
+}
+
+.container-valitse-potilas {
+    background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+    border-top: 5px solid #3498db;
+    padding: 0 10px;
+}
+
+.container-potilaan-varaukset {
+    border: 1px solid #e1e1e8;
+    border-top: 5px solid #3498db;
+    padding: 0 10px;
+    display: none;
+}
+
+.container-potilaan-varaukset table tbody tr:hover {
+    cursor: pointer;
+}
+
+.modal-body div label:first-child {
+    width: 130px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 1199px) {
+  .container-valitse-potilas, .container-potilaan-varaukset {
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* Hide captions */
+  .carousel-caption {
+    display: none
+  }
+}
