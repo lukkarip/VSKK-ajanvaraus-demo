@@ -43,28 +43,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr data-varausnumero="100">
                             <td id="txtVarattuAika">keskiviikko 10.8.2016 07:45</td>
                             <td id="txtToimipiste">945/41 Keuhko- ja hammaskuvaukset (UB2-röntgen, TYKS)</td>
                             <td id="txtPalvelu">Natiivikuvaukset, Hammaskuvaukset</td>
                             <td id="txtTilaavaYksikko">Syöpäklinikka</td>
                             <td id="txtLisatiedot">thx</td>
                         </tr>
-                        <tr>
+                        <tr data-varausnumero="101">
                             <td id="txtVarattuAika">torstai 11.8.2016 07:45</td>
                             <td id="txtToimipiste">945/41 Keuhko- ja hammaskuvaukset (UB2-röntgen, TYKS)</td>
                             <td id="txtPalvelu">Natiivikuvaukset, Hammaskuvaukset</td>
                             <td id="txtTilaavaYksikko">Syöpäklinikka</td>
                             <td id="txtLisatiedot">thx</td>
                         </tr>
-                        <tr>
+                        <tr  data-varausnumero="102">
                             <td id="txtVarattuAika">maanantai 15.8.2016 07:45</td>
                             <td id="txtToimipiste">945/41 Keuhko- ja hammaskuvaukset (UB2-röntgen, TYKS)</td>
                             <td id="txtPalvelu">Natiivikuvaukset, Hammaskuvaukset</td>
                             <td id="txtTilaavaYksikko">Syöpäklinikka</td>
                             <td id="txtLisatiedot">thx</td>
                         </tr>
-                        <tr>
+                        <tr data-varausnumero="103">
                             <td id="txtVarattuAika">tisitai 16.8.2016 07:45</td>
                             <td id="txtToimipiste">945/41 Keuhko- ja hammaskuvaukset (UB2-röntgen, TYKS)</td>
                             <td id="txtPalvelu">Natiivikuvaukset, Hammaskuvaukset</td>
@@ -89,15 +89,29 @@
                             <h4 class="modal-title" id="myModalLabel">Varattu aika</h4>
                         </div>
                         <div class="modal-body">
+                            <input type="hidden" id="varauksenNumero" name="varausnumero" value="0" />
                             <div id="modalVarattuAika"><label>Varattu aika: </label><label id="lblModalVarattuAikaArvo"></label></div>
                             <div id="modalToimipiste"><label>Toimipiste: </label><label id="lblModalToimipisteArvo"></label></div>
                             <div id="modalPalvelu"><label>Palvelu: </label><label id="lblModalPalveluArvo"></label></div>
                             <div id="modalTilaavaYksikko"><label>Tilaava yksikkö: </label><label id="lblModalTilaavaYksikkoArvo"></label></div>
                             <div id="modalLisatiedot"><label>Lisätiedot: </label><label id="lblModalLisatiedotArvo"></label></div>
+
+                            <div id="divModalBodyPeruAika">
+                                <hr />
+                                <div class="alert alert-danger" style="text-align: center;">
+                                    <strong>Varoitus! Oletko aivan varma että haluat perua varatun ajan?</strong>
+                                    <div style="margin-top: 10px;">
+                                        <button type="button" id="btnPeruAjavarausPeruutus" class="btn btn-default">En</button>
+                                        <button type="button" id="btnPeruAjanvarausVahvistus" class="btn btn-danger">Kyllä: Vahvista peruutus</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
-                            <button type="button" class="btn btn-danger">Peru aika</button>
+                            <button type="button" id="btnPeruAika" class="btn btn-danger">Peru aika</button>
                             <button type="button" class="btn btn-warning">Ajan siirto</button>
                         </div>
                     </div>
